@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DrinkController;
+use App\Http\Controllers\TypeController;
+use App\Http\Controllers\PackageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,4 +28,8 @@ Route::get( "/index", [ DrinkController::class, "index"]);
 
 Route::view( "/add", "addmod");
 
-route::post( "/newdrink", [DrinkController::class, "newDrink"]);
+route::post( "/newdrink", [DrinkController::class, "addDrink"]);
+
+route::post( "/newtype", [TypeController::class, "addType"]);
+
+route::post( "/newpackage", [PackageController::class, "addPackage"]);
